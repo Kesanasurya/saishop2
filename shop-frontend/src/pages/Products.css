@@ -1,0 +1,27 @@
+:root {
+  --products-bg: linear-gradient(135deg, #4bc8c4 0%, #c93660 100%);
+  --grid-gap: 20px;
+  --card-min: 200px;
+}
+
+.products-container {
+  background: var(--products-bg);
+  padding: 24px;
+  min-height: calc(100vh - 120px);
+  box-sizing: border-box;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-min), 1fr));
+  gap: var(--grid-gap);
+  margin-top: 20px;
+}
+
+/* Optional: adjust product card appearance spacing if needed */
+.products-grid > * {
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.products-grid > *:hover {
+  transform: translateY(-4px);
+}
